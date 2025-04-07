@@ -1,0 +1,10 @@
+1. Escriba una implementación de conversión de las siguientes representaciones:
+    a. RGB a HSV
+    b. HSV a RGB
+    Consideraciones tomar en cuenta:
+    ● Sin ramas (evaluaciones de condiciones).
+    ● Preferiblemente utilizando instrucciones de SIMD.
+    ● Que soporte un alto número de conversiones.
+    ● Tenga en cuenta las opciones de diseño específicas para su elección de
+    hardware.
+    Ver: http://en.wikipedia.org/wiki/HSV_color_space
