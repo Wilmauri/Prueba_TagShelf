@@ -42,9 +42,9 @@ function RGBtoHSV(red: number, green: number, blue: number): {h: number, s: numb
 
 //Text case
 interface RGB {
-    r: number;
-    g: number;
-    b: number;
+    red: number;
+    green: number;
+    blue: number;
   }
   
   interface HSV {
@@ -55,21 +55,21 @@ interface RGB {
   
   function testConversion(): void {
     const testColors: RGB[] = [
-      { r: 255, g: 0, b: 0 },     // Red
-      { r: 0, g: 255, b: 0 },     // Green
-      { r: 0, g: 0, b: 255 },     // Blue
-      { r: 255, g: 255, b: 0 },   // Yellow
-      { r: 255, g: 0, b: 255 },   // Magenta
-      { r: 0, g: 255, b: 255 },   // Cyan
-      { r: 255, g: 255, b: 255 }, // White
-      { r: 128, g: 128, b: 128 }, // Gray
-      { r: 0, g: 0, b: 0 }        // Black
+      { red: 255, green: 0, blue: 0 },     // Red
+      { red: 0, green: 255, blue: 0 },     // Green
+      { red: 0, green: 0, blue: 255 },     // Blue
+      { red: 255, green: 255, blue: 0 },   // Yellow
+      { red: 255, green: 0, blue: 255 },   // Magenta
+      { red: 0, green: 255, blue: 255 },   // Cyan
+      { red: 255, green: 255, blue: 255 }, // White
+      { red: 128, green: 128, blue: 128 }, // Gray
+      { red: 0, green: 0, blue: 0 }        // Black
     ];
     
     testColors.forEach((color: RGB) => {
-      const hsv: HSV = RGBtoHSV(color.r, color.g, color.b);
+      const hsv: HSV = RGBtoHSV(color.red, color.green, color.blue);
       console.log(
-        `RGB(${color.r}, ${color.g}, ${color.b}) → ` +
+        `RGB(${color.red}, ${color.green}, ${color.blue}) → ` +
         `HSV(${hsv.h.toFixed(1)}°, ${hsv.s.toFixed(2)}, ${hsv.v.toFixed(2)})`
       );
     });
